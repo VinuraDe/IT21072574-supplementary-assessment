@@ -1,18 +1,26 @@
 package com.example.myapplication;
 
 public class SupplierModel {
+
     Integer id;
     String name;
     String email;
+    String address;
     String phone;
-    String Address;
 
-    public SupplierModel(Integer id, String name, String email, String phone, String address) {
+    public SupplierModel(String name, String email, String address, String phone) {
+        this.name = name;
+        this.email = email;
+        this.address = address;
+        this.phone = phone;
+    }
+
+    public  SupplierModel(Integer id, String name, String email,String address, String phone) {
         this.id = id;
         this.name = name;
         this.email = email;
+        this.address = address;
         this.phone = phone;
-        Address = address;
     }
 
     public Integer getId() {
@@ -39,26 +47,19 @@ public class SupplierModel {
         this.email = email;
     }
 
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
     public String getPhone() {
         return phone;
     }
 
     public void setPhone(String phone) {
         this.phone = phone;
-    }
-
-    public String getAddress() {
-        return Address;
-    }
-
-    public void setAddress(String address) {
-        Address = address;
-    }
-
-    public SupplierModel(String name, String email, String phone, String address) {
-        this.name = name;
-        this.email = email;
-        this.phone = phone;
-        Address = address;
     }
 }

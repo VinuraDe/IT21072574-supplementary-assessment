@@ -14,19 +14,10 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="24">
         <activity
-            android:name=".ViewSupplier"
+            android:name=".ViewSupplierActivity"
             android:exported="false" />
         <activity
-            android:name=".AddSupplier"
-            android:exported="false" />
-        <activity
-            android:name=".HomeActivity"
-            android:exported="false" />
-        <activity
-            android:name=".RegisterActivity"
-            android:exported="false" />
-        <activity
-            android:name=".LoginActivity"
+            android:name=".AddSupplierActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
