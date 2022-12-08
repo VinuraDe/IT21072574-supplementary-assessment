@@ -5,30 +5,48 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
 
     android:orientation="vertical"
-    android:layout_height="400dp"
+    android:layout_height="390dp"
     android:layout_marginTop="20dp"
     android:background="@null">
+
+    <LinearLayout
+        android:layout_margin="1dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="48dp">
+        <TextView
+            android:id="@+id/text_supid"
+            android:layout_width="100dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="10dp"
+            android:text="ID"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:textStyle="bold" />
 
     <TextView
         android:textColor="@color/black"
         android:id="@+id/text_id"
         android:textSize="18dp"
         android:text="Id"
+        android:layout_marginLeft="10dp"
+        android:layout_height="48dp"
         android:textStyle="bold"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_width="match_parent" />
+
+    </LinearLayout>
 
     <LinearLayout
-        android:layout_margin="5dp"
+        android:layout_margin="1dp"
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="60dp">
+        android:layout_height="48dp">
 
         <TextView
             android:id="@+id/text_name"
             android:layout_width="100dp"
-            android:layout_height="50dp"
-            android:layout_margin="5dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="10dp"
             android:text="Name"
             android:textColor="@color/black"
             android:textSize="18dp"
@@ -39,7 +57,7 @@
             android:background="@null"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
+            android:layout_marginLeft="10dp"
             android:minHeight="48dp"
             android:text="Name"
             android:textSize="18sp"
@@ -48,16 +66,16 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_margin="5dp"
+        android:layout_margin="1dp"
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="60dp">
+        android:layout_height="48dp">
 
         <TextView
             android:id="@+id/text_email"
             android:layout_width="100dp"
-            android:layout_height="50dp"
-            android:layout_margin="5dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="10dp"
             android:text="Email"
             android:textColor="@color/black"
             android:textSize="18dp"
@@ -67,7 +85,7 @@
         android:background="@null"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="5dp"
+        android:layout_marginLeft="10dp"
         android:minHeight="48dp"
         android:text="Email"
         android:textColor="@color/black"
@@ -76,16 +94,16 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_margin="5dp"
+        android:layout_margin="1dp"
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="60dp">
+        android:layout_height="48dp">
 
         <TextView
         android:id="@+id/text_phone"
         android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:layout_margin="5dp"
+        android:layout_height="48dp"
+            android:layout_marginLeft="10dp"
         android:text="Phone"
         android:textColor="@color/black"
         android:textSize="18dp"
@@ -96,7 +114,7 @@
         android:background="@null"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="5dp"
+        android:layout_marginLeft="10dp"
         android:minHeight="48dp"
         android:text="Phone"
         android:textColor="@color/black"
@@ -106,16 +124,16 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_margin="5dp"
+        android:layout_margin="1dp"
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="60dp">
+        android:layout_height="48dp">
 
         <TextView
         android:id="@+id/text_address"
         android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:layout_margin="5dp"
+        android:layout_height="48dp"
+        android:layout_marginLeft="10dp"
         android:text="Address"
         android:textColor="@color/black"
         android:textSize="18dp"
@@ -126,7 +144,7 @@
         android:background="@null"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="5dp"
+        android:layout_marginLeft="10dp"
         android:minHeight="48dp"
         android:text="Address"
         android:textColor="@color/black"
@@ -136,7 +154,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_margin="5dp"
+        android:layout_margin="1dp"
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -146,7 +164,7 @@
             android:layout_width="116dp"
             android:layout_height="48dp"
             android:backgroundTint="#679907"
-            android:text="EDIT"
+            android:text="UPDATE"
             android:layout_marginLeft="50dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -169,7 +187,7 @@
     </LinearLayout>
 
     <View
-        android:layout_margin="5dp"
+        android:layout_margin="1dp"
         android:background="#C5C5C5"
         android:layout_width="match_parent"
         android:layout_height="1dp"/>

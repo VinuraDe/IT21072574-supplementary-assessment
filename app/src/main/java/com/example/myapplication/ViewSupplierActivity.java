@@ -27,7 +27,7 @@ public class ViewSupplierActivity extends AppCompatActivity {
             SupplierAdapter supplierAdapter = new SupplierAdapter(supplierModels,ViewSupplierActivity.this);
             recyclerView.setAdapter(supplierAdapter);
         }else {
-            Toast.makeText(this, "There is no employee in the database", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "No Suppliers in the database", Toast.LENGTH_SHORT).show();
         }
 
 

@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -56,6 +57,7 @@ public class SupplierAdapter extends RecyclerView.Adapter<SupplierAdapter.ViewHo
 
                 dbHelper.updateSupplier(new SupplierModel(supplierModel.getId(),stringName,stringEmail, stringAddress, stringPhone));
                 notifyDataSetChanged();
+                Toast.makeText(context, "Supplier details updated successfully....", Toast.LENGTH_SHORT).show();
                 ((Activity) context).finish();
                 context.startActivity(((Activity) context).getIntent());
             }
@@ -66,6 +68,7 @@ public class SupplierAdapter extends RecyclerView.Adapter<SupplierAdapter.ViewHo
             public void onClick(View v) {
                 dbHelper.deleteSupplier(supplierModel.getId());
                 supplier.remove(position);
+                Toast.makeText(context, "Supplier Deleted.....", Toast.LENGTH_SHORT).show();
                 notifyDataSetChanged();
             }
         });

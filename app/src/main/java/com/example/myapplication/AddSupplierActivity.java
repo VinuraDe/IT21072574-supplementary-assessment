@@ -1,6 +1,7 @@
 package com.example.myapplication;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -34,13 +35,31 @@ public class AddSupplierActivity extends AppCompatActivity {
                 String stringAddress = editText_address.getText().toString();
                 String stringPhone = editText_phone.getText().toString();
 
+                if (stringName.isEmpty()){
+                    editText_name.setError("Supplier Name is Required");
+                    editText_name.requestFocus();
+                    return;
+
+                }
+                if (!Patterns.EMAIL_ADDRESS.matcher(stringEmail).matches()){
+                    editText_email.setError("Invalid Email!");
+                    editText_email.requestFocus();
+                    return;
+                }
+
+                if(stringPhone.length() < 9){
+                    editText_phone.setError("Enter valid phone number!");
+                    editText_phone.requestFocus();
+                    return;
+                }
+
                 if (stringName.length() <=0 || stringEmail.length() <=0 || stringAddress.length() <=0 || stringPhone.length() <=0){
                     Toast.makeText(AddSupplierActivity.this, "Enter All Field", Toast.LENGTH_SHORT).show();
                 }else {
-                    DBHelper databaseHelperClass = new DBHelper(AddSupplierActivity.this);
-                    SupplierModel employeeModelClass = new SupplierModel(stringName,stringEmail,stringAddress,stringPhone);
-                    databaseHelperClass.addSupplier(employeeModelClass);
-                    Toast.makeText(AddSupplierActivity.this, "Add Employee Successfully", Toast.LENGTH_SHORT).show();
+                    DBHelper dbHelper = new DBHelper(AddSupplierActivity.this);
+                    SupplierModel supplierModel = new SupplierModel(stringName,stringEmail,stringAddress,stringPhone);
+                    dbHelper.addSupplier(supplierModel);
+                    Toast.makeText(AddSupplierActivity.this, "New Supplier Added Successfully", Toast.LENGTH_SHORT).show();
                     finish();
                     startActivity(getIntent());
                 }
